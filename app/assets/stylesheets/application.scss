@@ -1,0 +1,71 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-select";
+@import "bootstrap-datetimepicker";
+@import "jquery-ui";
+@import "x-editable/dist/bootstrap3-editable/css/bootstrap-editable";
+@import "admin/*";
+@import "*";
+
+.ansible_30 {
+  background-color: white;
+  color: black;
+}
+
+.ansible_31    { color: red; }
+.ansible_32    { color: limegreen; }
+.ansible_33    { color: yellow;}
+.ansible_34    { color: blue; }
+.ansible_35    { color: magenta; }
+.ansible_36    { color: cyan; }
+.ansible_37    { color: white; }
+.ansible_90    { color: white; }
+.ansible_none  { color: white; }
+
+.pre-scrollable.log {
+  background-color: black;
+  color: white;
+  max-height: 65vh;
+}
+
+.navbar .navbar-btn.pull-right {
+  margin-right: 15px;
+}
+
+a.no-hover:hover {
+  text-decoration: none;
+}
+
+.dropdown-menu > li > a.padding-sm {
+  padding: 3px 10px;
+}
+
+.dropdown-menu > li.selected > a {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+
+a.btn.disabled[title] {
+  pointer-events: auto;
+}
+
+#command_command,
+.form-control.monospace {
+  font-family: monospace;
+}
+
+.github-user-avatar {
+  border-radius: .2em
+}
+
+summary {
+  display: list-item;
+}
+
+// form elements not built by the form-builder have has-error divs directly around the form elements
+// color is same as `.has-error .form-control` from bootstrap
+.inline-errors .has-error {
+  border: 1px solid #a94442;
+  display: inline-block;
+}

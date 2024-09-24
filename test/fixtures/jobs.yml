@@ -1,0 +1,31 @@
+succeeded_test:
+  command: cap staging deploy
+  user: super_admin
+  project: test
+  status: succeeded
+  output: This worked!
+  commit: abcabcaaabcabcaaabcabcaaabcabcaaabcabca1
+
+succeeded_production_test:
+  command: cap production deploy
+  user: super_admin
+  project: test
+  status: succeeded
+  output: This worked!
+  commit: abcabcaaabcabcaaabcabcaaabcabcaaabcabca2
+
+running_test:
+  command: cap staging deploy
+  user: super_admin
+  project: test
+  status: running
+  output: This worked!
+  commit: abcabcaaabcabcaaabcabcaaabcabcaaabcabca3
+
+failed_test:
+  command: cap staging deploy
+  user: super_admin
+  project: test
+  status: failed
+  output: Error
+  commit: staging # failed to resolve the reference so not a valid sha

@@ -1,0 +1,17 @@
+{
+  "name": "Samson",
+  "author": "Zendesk",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zendesk/samson.git"
+  },
+  "devDependencies": {
+    "jshint": "~2.9.2"
+  },
+  "scripts": {
+    "jshint": "./node_modules/.bin/jshint app/assets/javascripts/*",
+    "jshint:plugins": "./node_modules/.bin/jshint plugins/*/app/assets/javascripts/*"
+  }
+}

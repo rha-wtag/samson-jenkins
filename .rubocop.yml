@@ -1,0 +1,299 @@
+require:
+- rubocop-rails
+
+AllCops:
+  DisplayCopNames: true
+  NewCops: disable
+  Exclude:
+  - db/schema.rb
+  - vendor/**/*
+  - tmp/**/*
+  - node_modules/**/*
+
+Metrics/ClassLength:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+# make `a = {bar: 1}` look like `a = foo(bar: 1)`
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Lint/AmbiguousOperator:
+  Enabled: false
+
+# Always use `->`
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+# prefer simpler `a == 0` over `a.zero?`
+Style/NumericPredicate:
+  EnforcedStyle: comparison
+
+Layout/FirstArgumentIndentation:
+  Enabled: false
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# often single `/` is more readable as `/a\/b/`
+Style/RegexpLiteral:
+  Enabled: false
+
+# sometimes the most readable way of doing things
+Style/ClassVars:
+  Enabled: false
+
+# nice for .with{} mock stubs
+Style/Semicolon:
+  Enabled: false
+
+# for simple cases more readable
+Style/GuardClause:
+  Enabled: false
+
+Style/FormatString:
+  EnforcedStyle: percent
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+# Allow use of `if a = b(1, 2)` for simplified control flow
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/TernaryParentheses:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+# we cannot enable this until breakman does not barf on ruby 2.5 blocks with rescue
+Style/RedundantBegin:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
+# Enable this once https://github.com/rubocop-hq/rubocop/issues/6410 is fixed
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+# Opt-in
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
+# Opt-in
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+# Opt-in
+Layout/FirstMethodParameterLineBreak:
+  Enabled: true
+
+# refute and assert are nice opposites
+Rails/RefuteMethods:
+  Enabled: false
+
+# we enforce UTC for Time.now, so no harm done
+Rails/TimeZone:
+  Enabled: false
+
+Rails/Date:
+  Enabled: false
+
+# we use this a lot in tests/db and sometimes want to skip side-effects
+Rails/SkipsModelValidations:
+  Enabled: false
+
+# works the same, so no harm done and sometimes we override the methods
+Rails/DynamicFindBy:
+  Enabled: false
+
+# we inherit a lot, so it complains about missing actions
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+# we don't use ApplicationRecord
+Rails/ApplicationRecord:
+  Enabled: false
+
+# Not helpful
+Rails/OutputSafety:
+  Enabled: false
+
+# Not helpful
+Rails/ReversibleMigration:
+  Enabled: false
+
+# Not helpful
+Rails/Output:
+  Enabled: false
+
+# Broken see https://github.com/rubocop-hq/rubocop-rails/issues/147
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+# We use that a lot
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+# Not helpful
+Rails/FilePath:
+  Enabled: false
+
+# TODO: enable
+Rails/FindEach:
+  Enabled: false
+
+# TODO: enable
+Rails/IndexBy:
+  Enabled: false
+
+# TODO: enable
+Rails/IndexWith:
+  Enabled: false
+
+# we don't always need environment
+Rails/RakeEnvironment:
+  Enabled: false
+
+# TODO: enable
+Rails/ApplicationController:
+  Enabled: false
+
+# TODO: enable
+Rails/ContentTag:
+  Enabled: false
+
+# TODO: enable
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+Style/AccessorGrouping:
+  Enabled: false
+
+# produces false-positives with html-safe, see app/helpers/application_helper.rb
+Style/StringConcatenation:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
